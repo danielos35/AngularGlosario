@@ -9,13 +9,16 @@ import { HomeComponent } from './home/home.component';
 
 // Importación de Routes
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 // Creación de rutas
 
 const appRoutes:Routes =[
 
-  {path:'', component:HomeComponent}, 
-  {path:'pageOne', component:PageOneComponent},
+  {path:'', component:HomeComponent},
+  
+  // Preapara la URL para recibir parametros con /: y el nombre del dato a enviar
+  {path:'pageOne/:dato', component:PageOneComponent},
   {path:'pageTwo', component:PageTwoComponent},
   {path:'pageThree', component:PageThreeComponent}
   
@@ -32,7 +35,10 @@ const appRoutes:Routes =[
   imports: [
     BrowserModule,
     // Importar RouterModule
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes), 
+
+    // Para baindig insertar FormsModule
+    FormsModule
 
   ],
   providers: [],
