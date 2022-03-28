@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page-one',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageOneComponent implements OnInit {
 
-  constructor() { }
+  // 1. Para recibir datos desde la URL debemos de inyectar en nuestro constructor el servicio 
+  constructor(private ruta:ActivatedRoute) { }
 
   ngOnInit(): void {
+  // 2. Asignar datos de la URL 
+  this.datosDesdeHome = this.ruta.snapshot.params['dato'];
+
   }
+
+  datosDesdeHome:string = ''; 
 
 }
