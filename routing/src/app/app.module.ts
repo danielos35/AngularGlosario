@@ -6,6 +6,8 @@ import { PageOneComponent } from './page-one/page-one.component';
 import { PageTwoComponent } from './page-two/page-two.component';
 import { PageThreeComponent } from './page-three/page-three.component';
 import { HomeComponent } from './home/home.component';
+import { PaginaErrorComponent } from './pagina-error/pagina-error.component';
+
 
 // Importación de Routes
 import { RouterModule, Routes } from '@angular/router';
@@ -20,7 +22,10 @@ const appRoutes:Routes =[
   // Preapara la URL para recibir parametros con /: y el nombre del dato a enviar
   {path:'pageOne/:dato', component:PageOneComponent},
   {path:'pageTwo', component:PageTwoComponent},
-  {path:'pageThree', component:PageThreeComponent}
+  {path:'pageThree', component:PageThreeComponent}, 
+
+  // Pagina de error, este path siempre debe de estar en el ultimo lugar 
+  {path:'**', component:PaginaErrorComponent}
   
 ];
 
@@ -30,7 +35,8 @@ const appRoutes:Routes =[
     PageOneComponent,
     PageTwoComponent,
     PageThreeComponent,
-    HomeComponent
+    HomeComponent,
+    PaginaErrorComponent
   ],
   imports: [
     BrowserModule,
