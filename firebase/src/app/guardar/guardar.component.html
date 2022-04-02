@@ -1,5 +1,8 @@
 <div class="contenedor">
     <input type="text" [(ngModel)]="datos">
     <h1>{{datos}}</h1>
+    <h2>{{consulta}}</h2>
     <button (click)="guardar(datos)"> Guardar Datos </button>
+    <button (click)="actualizar(datos)">Actualizar Dato</button>
+    <button (click)="verUltimoDato()">Ver dato</button>
 </div>

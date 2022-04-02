@@ -16,10 +16,24 @@ export class GuardarComponent implements OnInit {
   }
 
   datos:string ='';
+  consulta:any = ''; 
 
   guardar(datos:string){
     let data = [datos]
     this.servicio.guardarDato(data)
   }
 
+
+  actualizar(dato:string){
+    let data = [dato];
+    this.servicio.ActualizarDato(data)
+  }
+
+
+  verUltimoDato(){
+  this.servicio.traerEmpleados().subscribe( respuesta=>{
+    console.log(respuesta);
+    
+  })
+  }
 }

@@ -26,4 +26,30 @@ export class RealtimeserviceService {
     )
   }
 
+
+  ActualizarDato(dato:any){
+    // La URL debe de terminar con datos.json como primer argumento, y como segundo el dato que quiera se almacenado
+    
+    // Put remplaza todos los datos 
+    this.httpClient.put('https://angular-99b0c-default-rtdb.firebaseio.com/datos.json',dato).subscribe(
+
+      Response=>{
+        console.log('Datos guardados'+Response  )
+        
+      },
+
+      error =>{
+        console.log('No se han podido guardar');
+        
+      }
+    )
+  }
+
+
+
+
+  traerEmpleados(){
+    return this.httpClient.get('https://angular-99b0c-default-rtdb.firebaseio.com/datos.json')
+  }
+
 }
