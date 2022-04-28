@@ -1,0 +1,24 @@
+
+
+<h1>Texto:</h1>
+
+<p>Minuscula: {{texto | lowercase}}</p><br>
+<p>Mayuscula: {{texto | uppercase}}</p><br>
+<p>Mayuscula: {{texto | titlecase}}</p><br>
+
+<h1>Numericos:</h1>
+
+<!-- se puede modificar numero maximo y minimo de digitos a mostrar, consultar documentación -->
+<p>Decimal: {{numericos | number}}</p><br>
+
+<!-- Redonde segun la cercania decimal -->
+<p>Porcentaje: {{porcentaje|percent}}</p><br>
+
+<!-- Moneda -->
+<p>Dinero: {{dinero|currency:'CLP'}}</p><br>
+
+
+<!-- Fechas, es posible formatear: , ver documentación para mas información -->
+<p>Fecha: {{fecha| date}}</p>
+<p>Fecha: {{fecha| date:"full"}}</p>
+<p>Fecha: {{fecha| date:"medium"}}</p>
