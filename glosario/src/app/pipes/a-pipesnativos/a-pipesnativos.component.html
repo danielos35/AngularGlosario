@@ -22,3 +22,48 @@
 <p>Fecha: {{fecha| date}}</p>
 <p>Fecha: {{fecha| date:"full"}}</p>
 <p>Fecha: {{fecha| date:"medium"}}</p>
+
+
+<h1>JSON</h1>
+<p>JSON: {{obJSON |json}}</p>
+
+<!-- Desestructurar -->
+<div *ngFor="let elemento of obJSON | keyvalue">
+
+    <!-- OBJETO -->
+    <p>
+       objeto: {{elemento |json}}
+    </p>
+
+    <!-- LLAVE -->
+    <p>
+        llave: {{elemento.key}}
+    </p>
+
+    <!-- VALOR -->
+
+    <p>
+        valor: {{elemento.value}}
+     </p>
+</div>
+
+<h1>SLICE</h1>
+<!-- primer parametro, inicio, segundo parametro elemento final -->
+<div *ngFor="let pais of paises |slice:1:2">
+    <p>{{pais}}</p>
+</div>
+
+<!-- Funciona también con strings -->
+<p>{{capitalColombia|slice:2:5}}</p>
+<div>COLOMBIA</div>`
+
+<h1>i18Select</h1>
+<!-- Permite generar mensajes personalizados según ciertos casos -->
+<h2>{{genero|i18nSelect:mensaje}}</h2>
+
+
+<h1>i18nPlural</h1>
+
+<h3>Notificaciones</h3>
+<p>{{notificacion | i18nPlural:notificaciones}}</p>
+<button (click)="sumarNotificaciones()">Sumar</button>
