@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-a-pipesnativos',
   templateUrl: './a-pipesnativos.component.html',
@@ -62,6 +61,12 @@ export class APipesnativosComponent implements OnInit {
   sumarNotificaciones(){
     this.notificacion++
   }
+
+
+  // Crear promesa
+  img = new Promise((resolve, reject)=>{
+    resolve('https://angular.io/assets/images/logos/angular/logo-nav@2x.png')
+  })
 }
 
 
