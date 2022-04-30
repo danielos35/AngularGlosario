@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PipesModule } from './pipes/pipes.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { PipesModule } from './pipes/pipes.module';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    PipesModule
+    PipesModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

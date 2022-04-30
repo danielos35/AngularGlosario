@@ -1,1 +1,16 @@
+<!-- Opcion 1 -->
+<h1 class="{{esOscuro | modoOscuro}}">HOLA MUNDO</h1>
 
+<!-- Opcion 2 -->
+<h1 [class]="esOscuro | modoOscuro">HOLA MUNDO</h1>
+
+<button (click)="cambiarModo()" >Cambiar modo</button>
+
+
+
+<!-- IVA -->
+
+<h1>IVA</h1><br>
+
+<input type="number" [(ngModel)] = "valorIva">
+<p>{{valorIva| iva:0.19:'Peso Colombiano'}}</p>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PipesService } from 'src/app/shared/servicios/pipes.service';
 
 @Component({
   selector: 'app-b-pipescustoms',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./b-pipescustoms.component.scss']
 })
 export class BPipescustomsComponent implements OnInit {
+  
+  esOscuro:boolean = true;
+  valorIva:number = 0;
 
-  constructor() { }
+  constructor(private pipeService:PipesService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  cambiarModo(){
+    this.pipeService.cambiarModo();
+    this.esOscuro = this.pipeService.esOscuro;
   }
+
+
+  
 
 }
