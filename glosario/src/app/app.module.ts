@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PipesModule } from './pipes/pipes.module';
 import { FormsModule } from '@angular/forms';
+import { TipodatoModule } from './tipodato/tipodato.module';
+import { DirectivasModule } from './directivas/directivas.module';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule, 
     PipesModule, 
-    FormsModule
+    FormsModule, 
+    TipodatoModule, 
+    DirectivasModule
   ],
   providers: [],
   bootstrap: [AppComponent]
