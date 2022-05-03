@@ -7,21 +7,20 @@ import { PipesModule } from './pipes/pipes.module';
 import { FormsModule } from '@angular/forms';
 import { TipodatoModule } from './tipodato/tipodato.module';
 import { DirectivasModule } from './directivas/directivas.module';
-
+import { FormulariosModule } from './formularios/formularios.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
-    PipesModule, 
-    FormsModule, 
-    TipodatoModule, 
-    DirectivasModule
+    AppRoutingModule,
+    PipesModule,
+    FormsModule,
+    TipodatoModule,
+    DirectivasModule,
+    FormulariosModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
