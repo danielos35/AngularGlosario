@@ -5,6 +5,7 @@ import {
   FormGroup,
   FormBuilder,
   Validators,
+  FormArray,
 } from '@angular/forms';
 
 @Component({
@@ -27,9 +28,7 @@ export class FormulariosReactivosComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
   // 2. crear Formulario
 
-
   miFormulario: FormGroup = this.fb.group({
-
     // 1. Primer argumento valor por defecto.
     // 2. Segundo argumento validaciones sincronas
     // 3. Validaciones asincronas
@@ -39,7 +38,30 @@ export class FormulariosReactivosComponent implements OnInit {
     telefono: [123],
     edad: [321],
     peso: [123],
+
+    // Arreglos
+    listado: this.fb.array([]),
   });
 
+  // Asociar controladores independiente......
+
+  tecnologias: FormControl = this.fb.control('', [Validators.required]);
   ngOnInit(): void {}
+
+  // Validar si formulario es invalido y fue tocado
+  validar() {
+    return this.miFormulario.invalid && this.miFormulario.touched;
+  }
+
+  
+  // Obtener elementos para agregar a la lista
+  get elemento(){
+    return this.miFormulario.get('listado') as FormArray
+  }
+  // Agregar elementos a la lista 
+  agregarElemento(){
+    this.elemento.push(this.fb.control(this.tecnologias.value))
+    console.log(this.tecnologias.value);
+    
+  }
 }

@@ -1,9 +1,13 @@
+<input type="text" [formControl] = "tecnologias">
 <form [formGroup]="miFormulario" action="">
     <input type="text" placeholder="Nombre" formControlName= "nombre"><br><br>
-    <input type="text" placeholder="Apellido" formControlName= "apellido"><br><br>
+    <input type="text" placeholder="Listado" formControlName= "listado"><br><br>
     <input type="number" placeholder="Numero de telefono" formControlName= "telefono"><br><br>
     <input type="number" placeholder="Edad" formControlName = "edad"><br><br>
     <input type="number" placeholder="Peso" formControlName = "peso"><br><br>
 </form>
 <p>{{miFormulario.invalid}}</p>
-<button>Enviar</button>
+<div *ngIf="validar()" >Formulario INVALIDAO</div>
+
+<!-- Asociar control independiente -->
+<button (click)="agregarElemento()">Enviar</button>
