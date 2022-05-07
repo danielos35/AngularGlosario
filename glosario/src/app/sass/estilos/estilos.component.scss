@@ -1,0 +1,59 @@
+// Los selectores en angular son los mismos
+
+// Importar SASS configurado desde angular.json
+
+@import "./scss/config";
+
+h1{
+    color: $azul;
+    &:hover{
+        color: $rojo;
+    }
+}
+
+// Clases y seudoclases
+.btn{
+    background: $rojo;
+    color: $azul;
+
+    &:hover{
+        background: $gris;
+    }
+
+    &.dark{
+        background-color: $negro;
+        color: $blanco;
+        &:hover{
+            // Aclarar
+            background-color: lighten($color: $negro, $amount: 30);
+        }
+
+    }
+    &.ligth{
+        background-color: $blanco;
+        color:black;
+
+        &:active{
+            background-color: darken($color: $blanco, $amount: 30);
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+// Partials
+    // Ver index css para conocer la importación
+
+// Ver angular.json para la configuración global
+    // "stylePreproccessorOptions":{
+    //     "includePath":['ruta del archivo de configuración']
+    // }

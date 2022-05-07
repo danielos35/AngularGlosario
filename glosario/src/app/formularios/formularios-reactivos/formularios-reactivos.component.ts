@@ -62,6 +62,8 @@ export class FormulariosReactivosComponent implements OnInit {
   agregarElemento(){
     this.elemento.push(this.fb.control(this.tecnologias.value))
     console.log(this.tecnologias.value);
+    this.miFormulario.disable();
+    this.miFormulario.reset();
     
   }
 }
