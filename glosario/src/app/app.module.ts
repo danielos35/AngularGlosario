@@ -9,6 +9,7 @@ import { TipodatoModule } from './tipodato/tipodato.module';
 import { DirectivasModule } from './directivas/directivas.module';
 import { FormulariosModule } from './formularios/formularios.module';
 import { SassModule } from './sass/sass.module';
+import { RutasModule } from './rutas/rutas.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { SassModule } from './sass/sass.module';
     DirectivasModule,
     FormulariosModule,
     SassModule,
+    RutasModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
