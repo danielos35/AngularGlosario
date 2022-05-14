@@ -9,7 +9,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./rutas/rutas.module').then((modulo) => modulo.RutasModule),
   },
-  { path: '', component: FormulariosReactivosComponent },
+  { path: '    ', component: FormulariosReactivosComponent },
 
   // Rutas por defecto
   { path: '**', redirectTo: 'home' },
