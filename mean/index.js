@@ -2,11 +2,17 @@
 const express = require("express");
 const app = express();
 
+
+
+
+// Traer variables de entorno 
+require('dotenv').config()
+
 //Escuchar.............................................................................
 // 1. Primer argumento: puerto en ejecución. (Se pueden tener 65536 puertos por IP).
 // 2. Segundo callBack: tarea a ejecutar.
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("aplicación corriendo en el puerto 3000");
 });
 
