@@ -9,7 +9,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./rutas/rutas.module').then((modulo) => modulo.RutasModule),
   },
-  { path: '    ', component: FormulariosReactivosComponent },
+  { path: 'reactivos', component: FormulariosReactivosComponent },
+
+  // Guardas
+  {
+    path: 'guardianes',
+    loadChildren: () =>
+      import('./guards/guards.module').then((modulo) => modulo.GuardsModule),
+  },
 
   // Rutas por defecto
   { path: '**', redirectTo: 'home' },

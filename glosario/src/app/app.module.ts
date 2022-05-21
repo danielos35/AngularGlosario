@@ -11,6 +11,7 @@ import { FormulariosModule } from './formularios/formularios.module';
 import { SassModule } from './sass/sass.module';
 import { RutasModule } from './rutas/rutas.module';
 import { FundamentalsModule } from './fundamentals/fundamentals.module';
+import { GuardsModule } from './guards/guards.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,8 +24,11 @@ import { FundamentalsModule } from './fundamentals/fundamentals.module';
     DirectivasModule,
     FormulariosModule,
     SassModule,
-    RutasModule,
     FundamentalsModule,
+
+    // Rutas
+    RutasModule,
+    GuardsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
