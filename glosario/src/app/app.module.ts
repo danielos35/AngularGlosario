@@ -10,6 +10,7 @@ import { DirectivasModule } from './directivas/directivas.module';
 import { FormulariosModule } from './formularios/formularios.module';
 import { SassModule } from './sass/sass.module';
 import { RutasModule } from './rutas/rutas.module';
+import { FundamentalsModule } from './fundamentals/fundamentals.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import { RutasModule } from './rutas/rutas.module';
     FormulariosModule,
     SassModule,
     RutasModule,
+    FundamentalsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
