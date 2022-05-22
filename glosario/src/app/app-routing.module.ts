@@ -27,6 +27,14 @@ const routes: Routes = [
       ),
   },
 
+  {
+    path: 'fundamental',
+    loadChildren: () =>
+      import('./fundamentals/fundamentals.module').then(
+        (modulo) => modulo.FundamentalsModule
+      ),
+  },
+
   // Rutas por defecto
   { path: '**', redirectTo: 'home' },
 ];

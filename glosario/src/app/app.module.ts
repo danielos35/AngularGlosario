@@ -26,9 +26,13 @@ import { GuardsModule } from './guards/guards.module';
     SassModule,
     FundamentalsModule,
 
+    // formularios
+    FormsModule,
+
     // Rutas
     RutasModule,
     GuardsModule,
+    FundamentalsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
