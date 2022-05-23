@@ -6,6 +6,7 @@ import { CiclovidaComponent } from './ciclovida/ciclovida.component';
 import { FundamentalRoutingModule } from './fundamentals.routing';
 import { FormsModule } from '@angular/forms';
 import { OnchangesComponent } from './onchanges/onchanges.component';
+import { OndestroyComponent } from './ondestroy/ondestroy.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { OnchangesComponent } from './onchanges/onchanges.component';
     EventbindingComponent,
     CiclovidaComponent,
     OnchangesComponent,
+    OndestroyComponent,
   ],
   imports: [FormsModule, CommonModule, FundamentalRoutingModule],
   exports: [InterpolacionComponent, EventbindingComponent, CiclovidaComponent],
