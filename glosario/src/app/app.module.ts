@@ -12,9 +12,11 @@ import { SassModule } from './sass/sass.module';
 import { RutasModule } from './rutas/rutas.module';
 import { FundamentalsModule } from './fundamentals/fundamentals.module';
 import { GuardsModule } from './guards/guards.module';
+import { ManualService } from './servicios/manual.service';
+import { TestserviceComponent } from './testservice/testservice.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TestserviceComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,7 +36,9 @@ import { GuardsModule } from './guards/guards.module';
     GuardsModule,
     FundamentalsModule,
   ],
-  providers: [],
+
+  // todo lo que sea servicios debe de ser añadido en los providers
+  providers: [ManualService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
