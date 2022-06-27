@@ -3,23 +3,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ContadorPadreComponent } from './contador-padre.component';
 
 describe('ContadorPadreComponent', () => {
-  let component: ContadorPadreComponent;
-  let fixture: ComponentFixture<ContadorPadreComponent>;
+  it('valor del contador',()=>{
+    const contadorComponent = new ContadorPadreComponent();
+    expect(contadorComponent.contador).toBe(12)
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ContadorPadreComponent ]
-    })
-    .compileComponents();
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ContadorPadreComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  })
 });
